@@ -9,12 +9,7 @@ public class Person
     String phoneNum;
     
    public Person() {
-    /*	this.firstName=firstName;
-    	this.lastName=lastName;
-    	this.city=city;
-    	this.state=state;
-    	this.zip=zip;
-    	this.phoneNum=phoneNum;*/
+
     }
     
     
