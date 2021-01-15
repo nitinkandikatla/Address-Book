@@ -1,5 +1,6 @@
 package addressBook;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class AddressBook {
@@ -12,7 +13,7 @@ public class AddressBook {
         Scanner sc=new Scanner(System.in);
 		while (choice!=0)
         {
-            System.out.println("1.Add Person \n2.Update person \n3.Display ");
+            System.out.println("1.Add Person \n2.Update person \n3.Delete \n4.Display");
             System.out.println("Enter your choice:");
             choice=sc.nextInt();
             switch (choice)
@@ -77,7 +78,22 @@ public class AddressBook {
                 			}
                 	}
                 	break;
-                case 3:	
+                	
+                case 3:
+                	System.out.println("Enter person name to delete:");
+                	Scanner s=new Scanner(System.in);
+                	String name1=s.nextLine();
+                	Iterator<Person> itr=person.iterator();
+                	while(itr.hasNext()) {
+                		Person per=itr.next();
+                		if(per.firstName.equals(name1)) {
+                			itr.remove();
+                		}
+                		else {
+                			System.out.println("Person not found");
+                		}
+                	}
+                case 4:	
                 		System.out.println(person);
                 		break;
                 default:
